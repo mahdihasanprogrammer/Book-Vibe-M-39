@@ -9,14 +9,18 @@ const ListedWishList = ({sortingType}) => {
 
 const {wishListBooks} = useContext(bookContext);
 
+
+// sorting data;
 let filteredWishList = wishListBooks;
 
- if(sortingType== 'Pages'){
-   filteredWishList = [...wishListBooks].sort((a,b)=> a.totalPages - b.totalPages);
+ if(sortingType == 'Pages'){
+   filteredWishList = [...wishListBooks].sort((a,b)=> a.totalPages-b.totalPages);
  }
  else if(sortingType=='Rating'){
     filteredWishList=[...wishListBooks].sort((a,b) => a.rating -b.rating);
- }
+ };
+
+
 
     if( filteredWishList.length===0){
         return(
@@ -29,11 +33,12 @@ let filteredWishList = wishListBooks;
     return (
         <div className='space-y-4 my-8'>
             {
-                wishListBooks.map(book => 
+               filteredWishList.map(book => 
 
-        <div className="flex flex-col md:flex-row bg-base-100  gap-6 p-6 border-2 border-gray-200 rounded-2xl">
+        <div key={book.bookId}
+         className="flex flex-col md:flex-row bg-base-100  gap-6 p-6 border-2 border-gray-200 rounded-2xl">
 
-        <figure className='py-7 px-12  bg-base-300 rounded-2xl flex items-center    justify-center'>
+        <figure className='py-7 px-12  bg-base-300 rounded-2xl flex items-center justify-center'>
             <img className=' h-auto sm:h-96 md:h-44' src={book.image} />
         </figure>
 

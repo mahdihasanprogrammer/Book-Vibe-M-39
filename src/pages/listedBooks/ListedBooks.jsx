@@ -9,13 +9,13 @@ import { IoIosArrowDown } from 'react-icons/io';
 const ListedBooks = () => {
 
 const [sortingType, setSortingType] = useState('');
-console.log(sortingType)
+
 
     return (
     <div>
         <div className='flex justify-center items-center my-6'>
             <div className="dropdown">
-                <div tabIndex={0} role="button" className="btn bg-[#23BE0A] text-white m-1">Sort by <IoIosArrowDown/></div>
+                <div tabIndex={0} role="button" className="btn bg-[#23BE0A] text-white m-1">Sort by {sortingType} <IoIosArrowDown/></div>
               <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                 <li onClick={()=>{setSortingType('Pages')}}><a>Pages</a></li>
                 <li onClick={()=>{setSortingType('Rating')}}><a>Rating</a></li>

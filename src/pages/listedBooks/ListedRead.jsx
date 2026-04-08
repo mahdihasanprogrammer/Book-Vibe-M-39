@@ -9,7 +9,7 @@ const ListedRead = ({sortingType}) => {
 const {storedBooks} = useContext(bookContext);
 
 // const [filteredReadList, setFilteredReadList]= useState([...storedBooks]);
-console.log(sortingType)
+
  
 // useEffect(() => {
 //         let sortedData = [...storedBooks]; 
@@ -42,7 +42,7 @@ let filteredReadList = storedBooks;
                {
                   filteredReadList.map(book => 
    
-           <div className="flex flex-col md:flex-row bg-base-100  gap-6 p-6 border-2 border-gray-200 rounded-2xl">
+           <div key={book.bookId} className="flex flex-col md:flex-row bg-base-100  gap-6 p-6 border-2 border-gray-200 rounded-2xl">
    
            <figure className='py-7 px-12  bg-base-300 rounded-2xl flex items-center    justify-center'>
                <img className=' h-auto sm:h-96 md:h-44' src={book.image} />
