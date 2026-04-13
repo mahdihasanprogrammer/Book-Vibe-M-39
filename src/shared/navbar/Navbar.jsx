@@ -37,7 +37,7 @@ return (
       </ul>
 
     </div>
-    <h2 className="font-bold text-2xl">Book Vibe</h2>
+    <h2 className="font-bold text-2xl">My Book Vibe</h2>
   </div>
 
   <div className="navbar-center hidden lg:flex">
