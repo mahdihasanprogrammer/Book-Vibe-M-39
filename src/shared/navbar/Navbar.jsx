@@ -46,7 +46,7 @@ return (
     </ul>
   </div>
 
-  <div className="navbar-end space-x-2">
+  <div className="navbar-end space-x-1.5">
     <button className="btn bg-[#23BE0A] text-white">Sign in</button>
     <button className="btn bg-[#1c8591] text-white">Sign Up</button>
   </div>
