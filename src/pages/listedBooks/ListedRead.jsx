@@ -1,5 +1,5 @@
 
-import React, { useContext } from 'react';
+import React, { useContext,useEffect, useState } from 'react';
 import { bookContext } from '../../context/BookProvider';
 import { GrLocation } from 'react-icons/gr';
 import { HiOutlineDocumentReport, HiOutlineUsers } from 'react-icons/hi';
@@ -8,26 +8,26 @@ import { Link } from 'react-router';
 const ListedRead = ({sortingType}) => {
 const {storedBooks} = useContext(bookContext);
 
-// const [filteredReadList, setFilteredReadList]= useState([...storedBooks]);
+const [filteredReadList, setFilteredReadList]= useState([...storedBooks]);
 
  
-// useEffect(() => {
-//         let sortedData = [...storedBooks]; 
-//         if (sortingType === 'Pages') {
-//             sortedData.sort((a, b) => a.totalPages - b.totalPages);
-//         } else if (sortingType === 'Rating') {
-//             sortedData.sort((a, b) => a.rating - b.rating);
-//         }
-//         setFilteredReadList(sortedData);
-//     }, [storedBooks, sortingType]);
+useEffect(() => {
+        let sortedData =filteredReadList; 
+        if (sortingType === 'Pages') {
+            sortedData.sort((a, b) => a.totalPages - b.totalPages);
+        } else if (sortingType === 'Rating') {
+            sortedData.sort((a, b) => a.rating - b.rating);
+        }
+        setFilteredReadList(sortedData);
+    }, [filteredReadList, sortingType]);
 
-let filteredReadList = storedBooks;
- if(sortingType== 'Pages'){
-    filteredReadList = [...storedBooks].sort((a,b)=> a.totalPages - b.totalPages);
- }
- else if(sortingType=='Rating'){
-    filteredReadList=[...storedBooks].sort((a,b) => a.rating -b.rating);
- }
+// let filteredReadList = storedBooks;
+//  if(sortingType== 'Pages'){
+//     filteredReadList = storedBooks.sort((a,b)=> a.totalPages - b.totalPages);
+//  }
+//  else if(sortingType=='Rating'){
+//     filteredReadList=[...storedBooks].sort((a,b) => a.rating -b.rating);
+//  }
 
   if(filteredReadList.length===0){
         return(

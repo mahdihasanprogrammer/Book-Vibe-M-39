@@ -25,7 +25,7 @@ const handleMarkAsRead =(currentBook)=>{
 
     setWishListBook(filteredWishListBooks);
 
-    // localStorage.setItem('wishList', JSON.stringify(filteredWishListBooks))
+    localStorage.setItem('wishList', JSON.stringify(filteredWishListBooks))
     console.log(filteredWishListBooks)
    
 

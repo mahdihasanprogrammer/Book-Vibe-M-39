@@ -10,25 +10,37 @@ import BookDetails from './pages/bookDetails/BookDetails'
 import { ToastContainer } from 'react-toastify'
 import BookProvider from './context/BookProvider'
 import ListedBooks from './pages/listedBooks/ListedBooks'
+import PagesToRead from './pages/pagesToRead/PagesToRead'
 
 
 
 const router = createBrowserRouter([
 
  {
+  
   path:'/',
   Component:MainLayout,
+    // errorElement: <ErrorPage/>,
   children:[
     {index: true, Component: HomePage },
     {path:'/listedBook', Component:ListedBooks},
+    {path: '*',
+      element: <ErrorPage/>
+     },
     {
       path: '/bookDetails/:id',
       Component: BookDetails,
-      loader: ()=> fetch('/booksData.json')
-    }
+      loader: ()=> {
+        return  fetch('/booksData.json') 
+      }
+    },
+    {path: '/pages', Component: PagesToRead}
+   
   ],
-  errorElement:<ErrorPage/>
- }
+
+ 
+ },
+
 
 ])
 

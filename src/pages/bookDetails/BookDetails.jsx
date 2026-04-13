@@ -7,7 +7,10 @@ import { bookContext } from '../../context/BookProvider';
 const BookDetails = () => {
   
     const {id} = useParams();
+   
+   
     const books = useLoaderData();
+    console.log(useParams())
   
     
     const expectedBook = books.find(book => book.bookId === +id);
