@@ -1,16 +1,69 @@
-# React + Vite
+# 📚 Book Vibe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Link: https://book-vibe-m-39.vercel.app/
+🔗 Repository: <your-repo-link>
 
-Currently, two official plugins are available:
+## 📖 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Book Vibe is a React-based web application where users can explore books, manage a reading list and wishlist, and track reading progress visually. It provides a smooth user experience with dynamic routing, local storage support, and interactive UI components.
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 📖 Browse books from a local JSON file
+* 🔍 View detailed book information
+* 📌 Add books to Read List
+* ❤️ Add books to Wishlist
+* 🔄 Move books between lists
+* 💾 Store data using localStorage
+* 🔔 Show toast notifications for actions
+* 📊 Display reading progress with a bar chart
 
-## Expanding the ESLint configuration
+## 🧩 Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Home** – Banner and book section
+* **Listed Books** – Read List & Wishlist tabs
+* **Pages to Read** – Bar chart visualization
+
+## 🛠️ Technologies Used
+
+⚛️ React
+🧭 React Router
+🎨 Tailwind CSS
+🌼 DaisyUI
+📊 Recharts
+🔔 React Toastify
+🎯 React Icons
+⚡ Vite
+
+## 📦 Dependencies
+
+* react
+* react-dom
+* react-router
+* react-icons
+* react-tabs
+* react-toastify
+* recharts
+* tailwindcss
+* @tailwindcss/vite
+* daisyui
+
+## 💡 Key Functionality
+
+* Fetch and display book data from JSON
+* Dynamic routing for book details page
+* Add, remove, and move books between lists
+* Sync data with localStorage
+* Show feedback using toast notifications
+
+## 🛠️ Installation
+
+```bash id="install12"
+git clone <your-repo-link>
+cd book-vibe
+npm install
+npm run dev
+```
+
+
+⭐ Feel free to explore and give feedback!
